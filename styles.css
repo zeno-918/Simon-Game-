@@ -8,6 +8,12 @@ body {
   font-size: 3rem;
   margin: 5%;
   color: #fef2bf;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#level-title:hover {
+  color: #ff8086; /* Change to your desired hover color */
+  transform: scale(1.1); /* Slightly increase the size when hovered */
 }
 
 .container {
@@ -55,6 +61,7 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
 #madeBy {
   font-size: 100px;
 }

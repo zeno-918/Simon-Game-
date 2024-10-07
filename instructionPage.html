@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><i>INSTRUCTION PAGE</i></h1>
+    <h2>Step 1 - Add Javascript and jQuery</h2>
+    <p>1. Create a new file called game.js
+        <br>
+        2. Link to this new external JS file from your index.html
+        <br>
+        3. Add an alert to game.js and test that the alert gets triggered when you load up index.html in Chrome.
+        Once, you've confirmed that game.js is correctly linked, you can delete or comment out the alert.
+        <br>
+        4. Add jQuery to your website and test that it's successfully loaded by opening Chrome developer tools and typing $("h1")
+        
+        </p>
+
+    <h2>Step 2 - Create A New Pattern</h2>
+    <p>1. Inside game.js create a new function called nextSequence()
+        <br>
+        2. Inside the new function generate a new random number between 0 and 3, and store it in a variable called randomNumber
+        
+        You can use the Chrome console to verify that your code creates random numbers between the correct range.
+        <br>
+        
+        3. At the top of the game.js file, create a new array called buttonColours and set it to hold the sequence "red", "blue", "green", "yellow" .
+        <br>
+        4. Create a new variable called randomChosenColour and use the randomNumber from step 2 to select a random colour from the buttonColours array.
+        <br>
+        5. At the top of the game.js file, create a new empty array called gamePattern.
+        <br>
+        6. Add the new randomChosenColour generated in step 4 to the end of the gamePattern</p>
+
+    <h2>Step 3 - Show the Sequence to the User with Animations and Sounds</h2>
+        <p>1. Use jQuery to select the button with the same id as the randomChosenColour
+            <br>
+            2. Use Google/Stackoverflow to figure out how you can use jQuery to animate a flash to the button selected in step 1.
+            You should end up with an effect like this:
+            <br>
+            3. Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.</p>
+    
+    <h2>Step 4 - Check Which Button is Pressed</h2>
+        <p>1. Use jQuery to detect when any of the buttons are clicked and trigger a handler function.
+            <br>
+            2. Inside the handler, create a new variable called userChosenColour to store the id of the button that got clicked.
+            
+             So if the Green button was clicked, userChosenColour will equal its id which is "green".
+            
+            <br>
+            3. At the top of the game.js file, create a new empty array with the name userClickedPattern.
+            <br>
+            4. Add the contents of the variable userChosenColour created in step 2 to the end of this new userClickedPattern
+            <br>
+            At this stage, if you log the userClickedPattern you should be able to build up an array in the console by clicking on different buttons.
+            </p>
+
+    <h2>Step 5 - Add Sounds to Button Clicks</h2>
+            <p>1. In the same way we played sound in nextSequence() , when a user clicks on a button, the corresponding sound should be played. e.g if the Green button is clicked, then green.mp3 should be played.
+                <br>
+                2. Create a new function called playSound() that takes a single input parameter called name.
+                <br>
+                3. Take the code we used to play sound in the nextSequence() function and move it to playSound().
+                <br>
+                4. Refactor the code in playSound() so that it will work for both playing sound in nextSequence() and when the user clicks a button.</p>
+
+    <h2>Step 6 - Add Animations to User Clicks</h2>
+
+                <p>1. Create a new function called animatePress(), it should take a single input parameter called currentColour.
+                    <br>
+                    2. Take a look inside the styles.css file, you can see there is a class called "pressed", it will add a box shadow and changes the background colour to grey.
+                    <br>
+                    3. Use jQuery to add this pressed class to the button that gets clicked inside animatePress().
+                    <br>
+                    4. use Google/Stackoverflow to figure out how you can use Javascript to remove the pressed class after a 100 milliseconds.
+                    <br>
+                    Note: If you need any hints, try scrolling down. 👇</p>
+
+    <h2>Step 7 - Start the Game</h2>
+
+                    <p>1. Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
+                        <br>
+                                    You'll need a way to keep track of whether if the game has started or not, so you only call nextSequence() on the first keypress.
+                        <br>
+                        2. Create a new variable called level and start at level 0.
+                        <br>
+                        3. The h1 title starts out saying "Press A Key to Start", when the game has started, change this to say "Level 0".
+                        <br>
+                        4. Inside nextSequence(), increase the level by 1 every time nextSequence() is called.
+                        <br>
+                        5. Inside nextSequence(), update the h1 with this change in the value of level.
+                        </p>
+
+    <h2>Step 8 - Check the User's Answer Against the Game Sequence8</h2>
+
+                        <p>1. Create a new function called checkAnswer(), it should take one input with the name currentLevel
+                            <br>
+                            2. Call checkAnswer() after a user has clicked and chosen their answer, passing in the index of the last answer in the user's sequence.
+                            
+                            e.g. If the user has pressed red, green, red, yellow, the index of the last answer is 3.
+                            <br>
+                            3. Write an if statement inside checkAnswer() to check if the most recent user answer is the same as the game pattern. If so then log "success", otherwise log "wrong".
+                            
+                            You can now use these log statements along with logging the values of userClickedPattern and gamePattern in the Chrome Developer Tools console to check whether if your code is performing as you would expect and debug your code as needed. Once you're done, feel free to remove these log statements.
+                            <br>
+                            4. If the user got the most recent answer right in step 3, then check that they have finished their sequence with another if statement.
+                            <br>
+                            5. Call nextSequence() after a 1000 millisecond delay.
+                            <br>
+                            6. Once nextSequence() is triggered, reset the userClickedPattern to an empty array ready for the next level.
+                            <br>
+                            
+                            
+                            Now you should be able to play the game.
+                            
+                            
+                            <br>
+                            
+                            In the next few challenges, we'll address what happens when the user get's the pattern wrong and how to restart the game.
+                            
+                            </p>
+
+    <h2>Step 9 - Game Over</h2>
+
+                            <p>1. In the sounds folder, there is a sound called wrong.mp3, play this sound if the user got one of the answers wrong.
+                                <br>
+                                2. In the styles.css file, there is a class called "game-over", apply this class to the body of the website when the user gets one of the answers wrong and then remove it after 200 milliseconds.
+                                <br>
+                                All going well, you should end up with this flash effect:
+                                
+                                <br>
+                                3. Change the h1 title to say "Game Over, Press Any Key to Restart" if the user got the answer wrong.</p>
+
+    <h2>Step 10 - Restart the Game</h2>
+
+                                <p>1. Create a new function called startOver().
+                                    <br>
+                                    2. Call startOver() if the user gets the sequence wrong.
+                                    <br>
+                                    3. Inside this function, you'll need to reset the values of level, gamePattern and started variables.
+                                    
+                                    </p>
+</body>
+</html>

@@ -22,7 +22,7 @@ $(".btn").click(function () {
 
   playanSound(userChosenColour);
   animatePress(userChosenColour);
-  checkAnwer(userClickedPattern.length - 1);
+  checkAnswer(userClickedPattern.length - 1);
 });
 
 function nextSequence() {

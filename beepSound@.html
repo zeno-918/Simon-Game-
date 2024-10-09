@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+<body>
+  <h1 id="level-title">Press A Key to Start</h1>
+  <div class="container">
+  <span>
+    <div lass="row">
+       
+      <audio id="myAudio">
+        <source src="beep-02.wav" type="audio/wav">
+       </audio>
+      <button onclick="playAudio()"><div type="button/audio/wav" id="green" class="btn green"></button>
+      <script>
+        function playAudio() {
+         var audio = document.getElementById("myAudio");
+         audio.play();
+       }
+      </script>
+
+      <div class="row"></div>
+        <audio id="myAudio">
+         <source src="beep-02.wav" type="audio/wav">
+        </audio>
+      <button onclick="playAudio()"><div type="button" id="red" class="btn red"></button>
+       <script>
+         function playAudio() {
+          var audio = document.getElementById("myAudio");
+          audio.play();
+        }
+       </script>
+      </div>
+    </div>
+</span>
+    <div class="row">
+        <audio id="myAudio">
+         <source src="beep-02.wav" type="audio/wav">
+        </audio>
+      <button onclick="playAudio()"><div type="button" id="yellow" class="btn yellow"></button>
+       <script>
+         function playAudio() {
+          var audio = document.getElementById("myAudio");
+          audio.play();
+        }
+       </script>
+    </div>
+    <div>
+      <audio id="myAudio">
+    <source src="beep-02.wav" type="audio/wav">
+       </audio>
+          <button onclick="playAudio()"><div type="button" id="blue" class="btn blue"></button>
+         <script>
+        function playAudio() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+                 }
+      </script>
+      </div>
+      
+
+      </div>
+
+    </div>
+
+  </div>
+  <footer>
+    <p><a href="instructionPage.html">INSTRUCTION</a></p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

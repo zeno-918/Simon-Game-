@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+  <h1 id="level-title">Press A Key to Start</h1>
+
+  
+
+
+    <div class="grid">
+      <audio id="greenAudio">
+        <source src="beep-02.wav" type="audio/wav">
+      </audio>
+      <button onclick="playAudio('greenAudio')" id="green" class="btn green"></button>
+
+      <audio id="redAudio">
+        <source src="beep-02.wav" type="audio/wav">
+      </audio>
+      <button onclick="playAudio('redAudio')" id="red" class="btn red"></button>
+
+      <audio id="yellowAudio">
+        <source src="beep-02.wav" type="audio/wav">
+      </audio>
+      <button onclick="playAudio('yellowAudio')" id="yellow" class="btn yellow"></button>
+
+      <audio id="blueAudio">
+        <source src="beep-02.wav" type="audio/wav">
+      </audio>
+      <button onclick="playAudio('blueAudio')" id="blue" class="btn blue"></button>
+    </div>
+
+  </div>
+
+
+  <script>
+    function playAudio(audioId) {
+      var audio = document.getElementById(audioId);
+      audio.play();
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+
+  <footer>
+    <p>
+      <h1><strong><a href="instructionPage.html">INSTRUCTION</a></h1></p>
+  </footer>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #011f3f;
+  background-color: #1d7ade;
 }
 
 #level-title {
@@ -57,4 +57,20 @@ body {
 }
 #madeBy {
   font-size: 100px;
+}
+
+
+.intsbtn a{
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.intsbtn{
+  border-radius: 1rem;
+  padding: 5px;
+}
+
+.intsbtn:hover{
+  background-color: transparent;
+  box-shadow: 4px 4px 4px rgb(89, 223, 232);
 }
